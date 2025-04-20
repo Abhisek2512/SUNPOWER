@@ -39,7 +39,7 @@
         <a href="#projects" class="hover:text-yellow-500">Projects</a>
         <a href="#how-it-works" class="hover:text-yellow-500">How It Works</a>
         <a href="#contact" class="hover:text-yellow-500">Contact</a>
-        <a href="#quote" class="bg-yellow-500 text-white px-4 py-1 rounded hover:bg-yellow-600">Get Quote</a>
+        <a href="#Get" class="bg-yellow-500 text-white px-4 py-1 rounded hover:bg-yellow-600">Get Quote</a>
       </nav>
 
       <!-- Mobile Nav Toggle -->
@@ -56,7 +56,7 @@
       <a href="#projects" class="block text-gray-700 hover:text-yellow-500">Projects</a>
       <a href="#how-it-works" class="block text-gray-700 hover:text-yellow-500">How It Works</a>
       <a href="#contact" class="block text-gray-700 hover:text-yellow-500">Contact</a>
-      <a href="#quote" class="block bg-yellow-500 text-white px-4 py-2 rounded text-center hover:bg-yellow-600">Get a Quote</a>
+      <a href="#get-quote" class="block bg-yellow-500 text-white px-4 py-2 rounded text-center hover:bg-yellow-600">Get a Quote</a>
     </nav>
   </header>
 
@@ -69,7 +69,7 @@
       <p class="text-lg text-gray-700 max-w-2xl mx-auto">Join the clean energy revolution with SunPower Enterprises. Affordable, efficient, and sustainable solar energy solutions for homes and businesses.</p>
       
       <div class="mt-6">
-        <a href="quote.html" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded font-semibold">Get a Free Quote</a>
+        <a href="#get-quote" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded font-semibold">Get a Free Quote</a>
       </div>
       
       <!-- 🎥 Lottie Animation -->
@@ -341,35 +341,54 @@
   </div>
 </section>
     <!-- Contact Us Section Title -->
-<section class="py-16 bg-yellow-50 text-center scroll-mt-24" id="contact">
-  <h1 class="text-4xl md:text-5xl font-extrabold text-yellow-500 mb-2">Contact Us</h1>
+<section class="py-16 bg-yellow-50 text-center scroll-mt-24" id="get-quote">
+  <h1 class="text-4xl md:text-5xl font-extrabold text-yellow-500 mb-2">Get Quote</h1>
   <p class="text-gray-700 text-lg">We're here to answer all your questions and help you go solar!</p>
 </section>
 
 <!-- Contact Form Section -->
-<section class="py-20 bg-white">
+<section class="py-20 bg-white scroll-mt-24">
   <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10">
-    <!-- Contact Form -->
-    <div>
-      <h2 class="text-3xl font-semibold mb-6 text-gray-800">Send Us a Message</h2>
-      <form class="space-y-6">
-        <div>
-          <label class="block mb-1 font-medium text-gray-700" for="name">Full Name</label>
-          <input type="text" id="name" name="name" class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300" required />
-        </div>
-        <div>
-          <label class="block mb-1 font-medium text-gray-700" for="email">Email Address</label>
-          <input type="email" id="email" name="email" class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300" required />
-        </div>
-        <div>
-          <label class="block mb-1 font-medium text-gray-700" for="message">Message</label>
-          <textarea id="message" name="message" rows="5" class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300" required></textarea>
-        </div>
-        <button type="submit" class="bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-yellow-600 focus:outline-none transition duration-300">Send Message</button>
-      </form>
-    </div>
+    <!-- Get a Quote Section -->
+<section id="get-quote" class="py-16 bg-gray-100 px-4">
+  <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
+    <h2 class="text-3xl font-semibold mb-6 text-gray-800 text-center">Get a Free Quote</h2>
+    <form class="space-y-6" enctype="multipart/form-data">
+      <!-- Full Name -->
+      <div>
+        <label class="block mb-1 font-medium text-gray-700" for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300" required />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label class="block mb-1 font-medium text-gray-700" for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300" required />
+      </div>
+
+      <!-- Message -->
+      <div>
+        <label class="block mb-1 font-medium text-gray-700" for="message">Your Requirements</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell us more about your energy needs or location..." class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300" required></textarea>
+      </div>
+
+      <!-- File Upload -->
+      <div>
+        <label class="block mb-1 font-medium text-gray-700" for="bill">Upload Electricity Bill (PDF/Photo)</label>
+        <input type="file" id="bill" name="bill" accept=".pdf,image/*" class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300" />
+        <p class="text-sm text-gray-500 mt-1">Optional – helps us provide a more accurate quote.</p>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-yellow-600 focus:outline-none transition duration-300 w-full">
+        Request Quote
+      </button>
+    </form>
+  </div>
+</section>
 
     <!-- Contact Information -->
+     <section id="contact"class="py-16 bg-yellow-50 text-center scroll-mt-24> 
     <div>
       <h2 class="text-3xl font-semibold mb-6 text-gray-800">Contact Information</h2>
       <ul class="space-y-4 text-gray-700">
@@ -389,6 +408,7 @@
     <i class="fab fa-instagram text-2xl"></i> <!-- Instagram Icon -->
   </a>
 </div>
+</section>
 
         </li>
       </ul>
