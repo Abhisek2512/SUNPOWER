@@ -386,18 +386,45 @@
       </form>
     </div>
 
-    <!-- Solar Calculator -->
-    <div class="bg-gray-100 p-8 rounded-lg shadow-md">
-      <h2 class="text-3xl font-semibold text-center mb-6 text-gray-800">Solar System Size Calculator</h2>
-      <div class="form-group mb-6">
-        <label for="monthly-bill" class="block text-gray-700 font-medium mb-2">Enter Your Monthly Electricity Bill (Units)</label>
-        <input type="number" id="monthly-bill" placeholder="Enter monthly bill in kWh" class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300" />
-      </div>
-      <button id="calculate-btn" class="bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-yellow-600 transition duration-300 w-full font-semibold">
-        Calculate
-      </button>
-      <div id="result" class="result text-center mt-6 text-xl font-semibold text-yellow-500"></div>
-    </div>
+    <!-- Solar Calculator with More Details -->
+<div class="bg-gray-100 p-8 rounded-lg shadow-md">
+  <h2 class="text-3xl font-semibold text-center mb-6 text-gray-800">Solar System Size Calculator</h2>
+
+  <!-- Consumer Number -->
+  <div class="form-group mb-4">
+    <label for="consumer-number" class="block text-gray-700 font-medium mb-2">Consumer Number</label>
+    <input type="text" id="consumer-number" placeholder="Enter your Consumer Number" class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+  </div>
+
+  <!-- Billing Unit -->
+  <div class="form-group mb-4">
+    <label for="billing-unit" class="block text-gray-700 font-medium mb-2">Billing Unit</label>
+    <select id="billing-unit" class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+      <option value="">Select Billing Unit</option>
+      <option value="domestic">Domestic</option>
+      <option value="commercial">Commercial</option>
+      <option value="agriculture">Agriculture</option>
+    </select>
+  </div>
+
+  <!-- Monthly Units -->
+  <div class="form-group mb-4">
+    <label for="monthly-units" class="block text-gray-700 font-medium mb-2">Monthly Units (kWh)</label>
+    <input type="number" id="monthly-units" placeholder="e.g. 300" class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+  </div>
+
+  <!-- Monthly Bill -->
+  <div class="form-group mb-6">
+    <label for="monthly-bill" class="block text-gray-700 font-medium mb-2">Monthly Bill (₹)</label>
+    <input type="number" id="monthly-bill" placeholder="e.g. 1500" class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+  </div>
+
+  <button id="calculate-btn" class="bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-yellow-600 transition duration-300 w-full font-semibold">
+    Calculate Recommended Size
+  </button>
+
+  <div id="result" class="text-center mt-6 text-xl font-semibold text-yellow-500"></div>
+</div>
 
   </div>
 </section>
@@ -479,15 +506,28 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
 <!-- Calculator Scriptrt -->
 <script>
   document.getElementById('calculate-btn').addEventListener('click', function () {
+    const consumerNumber = document.getElementById('consumer-number').value.trim();
+    const billingUnit = document.getElementById('billing-unit').value;
+    const monthlyUnits = parseFloat(document.getElementById('monthly-units').value);
     const monthlyBill = parseFloat(document.getElementById('monthly-bill').value);
-    if (!isNaN(monthlyBill) && monthlyBill > 0) {
-      const dailyBill = monthlyBill / 30;
-      const solarSystemKW = (dailyBill / 4).toFixed(2);
-      const result = document.getElementById('result');
-      result.textContent = `Recommended Solar System Size: ${solarSystemKW} kW`;
-    } else {
-      alert('Please enter a valid monthly bill in kWh.');
+    const result = document.getElementById('result');
+
+    if (!consumerNumber || !billingUnit || isNaN(monthlyUnits) || isNaN(monthlyBill) || monthlyUnits <= 0 || monthlyBill <= 0) {
+      result.textContent = '';
+      alert('Please fill all fields with valid information.');
+      return;
     }
+
+    const dailyUsage = monthlyUnits / 30;
+    const systemSize = (dailyUsage / 4).toFixed(2); // Assuming 4 sun hours/day
+
+    result.innerHTML = `
+      Consumer No: <strong>${consumerNumber}</strong><br>
+      Billing Unit: <strong>${billingUnit}</strong><br>
+      Monthly Units: <strong>${monthlyUnits} kWh</strong><br>
+      Monthly Bill: <strong>₹${monthlyBill}</strong><br><br>
+      🌞 Recommended Solar System Size: <strong>${systemSize} kW</strong>
+    `;
   });
 </script>
 
