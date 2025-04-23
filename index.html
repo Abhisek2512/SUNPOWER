@@ -551,42 +551,7 @@
     </div>
     <div class="text-center mt-8 text-xs text-gray-400">&copy; 2025 SunPower Enterprises. All rights reserved.</div>
   </footer>
-<!-- Quote Popup Modal -->
-<div id="quoteModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-  <div class="bg-white rounded-xl shadow-xl max-w-md w-full p-6 relative">
-    <!-- Close Button -->
-    <button id="closeModal" class="absolute top-3 right-3 text-gray-500 hover:text-red-500 text-xl font-bold">&times;</button>
 
-    <!-- Modal Title -->
-    <h2 class="text-2xl font-semibold text-yellow-500 mb-4 text-center">Get a Free Quote</h2>
-
-    <!-- Quote Form -->
-    <form id="quoteForm" onsubmit="return submitQuoteForm();" class="space-y-4">
-      <div>
-        <label class="block mb-1 text-gray-700 font-medium" for="name">Full Name</label>
-        <input type="text" id="name" name="name" required
-               class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-yellow-500">
-      </div>
-    
-      <div>
-        <label class="block mb-1 text-gray-700 font-medium" for="email">Email</label>
-        <input type="email" id="email" name="email" required
-               class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-yellow-500">
-      </div>
-    
-      <div>
-        <label class="block mb-1 text-gray-700 font-medium" for="message">Message</label>
-        <textarea id="message" name="message" rows="3" required
-                  class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-yellow-500"
-                  placeholder="Tell us your needs..."></textarea>
-      </div>
-    
-      <button type="submit"
-              class="w-full bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600 transition duration-300">
-        Request Quote
-      </button>
-    </form>
-    
 
 
 
@@ -676,39 +641,6 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
     document.getElementById('quoteModal').classList.add('hidden');
   });
 </script>
-<script>
-  function submitQuoteForm() {
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-    if (!name || !email || !message) {
-      alert("❗ Please fill in all fields.");
-      return false;
-    }
-
-    const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSdpdF4o9ze9kAuGHTZoS_Xs-EJWKu3DWT7ATnJhatYnLULN4g/formResponse";
-
-    const formData = new FormData();
-    formData.append("entry.1822847914", name);     // Full Name
-    formData.append("entry.1187176433", email);    // Email
-    formData.append("entry.1729262286", message);  // Message
-
-    fetch(formURL, {
-      method: "POST",
-      mode: "no-cors",
-      body: formData
-    }).then(() => {
-      alert("✅ Your quote request has been sent!");
-      document.getElementById("quoteForm").reset();
-    }).catch(() => {
-      alert("❌ Something went wrong. Please try again.");
-    });
-
-    return false; // Prevent default form submission
-  }
-</script>
-
 
 
 
