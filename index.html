@@ -631,7 +631,6 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
     `;
   });
 </script>
-
 <script>
   function submitQuoteForm() {
     const name = document.getElementById("name").value.trim();
@@ -643,12 +642,12 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
       return false;
     }
 
-    const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSdpdF4o9ze9kAuGHTZoS_Xs-EJWKu3DWT7ATnJhatYnLULN4g/formResponse";
-
+    const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSe3Ss6LjuLjPvS5QLvOOaw2_S_i_kn0C2PDqSEV1sf7fsNWMw/formResponse";
     const formData = new FormData();
-    formData.append("entry.1822847914", name);     // Full Name
-    formData.append("entry.1187176433", email);    // Email
-    formData.append("entry.1729262286", message);  // Message
+
+    formData.append("entry.1654100467", name);     // Full Name
+    formData.append("entry.2125434461", email);    // Email
+    formData.append("entry.1151356302", message);  // Message
 
     fetch(formURL, {
       method: "POST",
@@ -661,10 +660,9 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
       alert("❌ Something went wrong. Please try again.");
     });
 
-    return false; // Prevent default form submission
+    return false;
   }
 </script>
-
 
 
 </body>
