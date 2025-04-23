@@ -594,22 +594,6 @@
   </div>
 </div>
 
-<!-- Popup Overlay -->
-<div id="quote-popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-  <div class="bg-white rounded-lg shadow-lg w-11/12 max-w-md p-6 transform transition-transform duration-500 translate-y-full" id="quote-popup-content">
-    <div class="flex justify-between items-center mb-4">
-      <h3 class="text-xl font-semibold text-gray-800">Get a Free Quote</h3>
-      <button id="close-popup" class="text-gray-600 hover:text-red-500 text-2xl leading-none">&times;</button>
-    </div>
-    <form class="space-y-4">
-      <input type="text" placeholder="Full Name" class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-yellow-500" required>
-      <input type="email" placeholder="Email Address" class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-yellow-500" required>
-      <textarea placeholder="Message" rows="3" class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-yellow-500" required></textarea>
-      <input type="file" accept=".pdf,image/*" class="w-full">
-      <button type="submit" class="w-full bg-yellow-500 text-white py-2 rounded hover:bg-yellow-600">Request Quote</button>
-    </form>
-  </div>
-</div>
 
 
 
@@ -696,31 +680,6 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
   // Close button handler
   document.getElementById('closeModal').addEventListener('click', () => {
     document.getElementById('quoteModal').classList.add('hidden');
-  });
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const popup = document.getElementById('quote-popup');
-    const popupContent = document.getElementById('quote-popup-content');
-    const closeBtn = document.getElementById('close-popup');
-
-    // Only show once per session
-    if (!sessionStorage.getItem('quotePopupShown')) {
-      setTimeout(() => {
-        popup.classList.remove('hidden');
-        popupContent.classList.add('translate-y-0'); // slide in
-        popupContent.classList.remove('translate-y-full');
-        sessionStorage.setItem('quotePopupShown', 'true');
-      }, 10000); // 10 seconds
-    }
-
-    closeBtn.addEventListener('click', () => {
-      popupContent.classList.remove('translate-y-0');
-      popupContent.classList.add('translate-y-full');
-      setTimeout(() => {
-        popup.classList.add('hidden');
-      }, 500); // match transition duration
-    });
   });
 </script>
 
