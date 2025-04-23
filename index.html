@@ -426,7 +426,7 @@
     <div class="bg-white p-8 rounded-lg shadow-md">
     
       <h2 class="text-3xl font-semibold mb-6 text-gray-800 text-center">Get a Free Quote</h2>
-      <form class="space-y-6" enctype="multipart/form-data">
+      <form id="quoteForm" onsubmit="return submitQuoteForm();" class="space-y-6" enctype="multipart/form-data">
         <!-- Full Name -->
         <div>
           <label class="block mb-1 font-medium text-gray-700" for="name">Full Name</label>
@@ -628,6 +628,38 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
   });
 </script>
 
+<script>
+  function submitQuoteForm() {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !message) {
+      alert("❗ Please fill in all fields.");
+      return false;
+    }
+
+    const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSdpdF4o9ze9kAuGHTZoS_Xs-EJWKu3DWT7ATnJhatYnLULN4g/formResponse";
+
+    const formData = new FormData();
+    formData.append("entry.1822847914", name);     // Full Name
+    formData.append("entry.1187176433", email);    // Email
+    formData.append("entry.1729262286", message);  // Message
+
+    fetch(formURL, {
+      method: "POST",
+      mode: "no-cors",
+      body: formData
+    }).then(() => {
+      alert("✅ Your quote request has been sent!");
+      document.getElementById("quoteForm").reset();
+    }).catch(() => {
+      alert("❌ Something went wrong. Please try again.");
+    });
+
+    return false; // Prevent default form submission
+  }
+</script>
 
 
 
