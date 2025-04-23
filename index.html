@@ -382,43 +382,6 @@
 <!-- Quote Form + Calculator Section -->
 <section class="py-20 bg-white scroll-mt-24">
   <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10">
-
-    <!-- Quote Form -->
-    <div class="bg-white p-8 rounded-lg shadow-md">
-      <h2 class="text-3xl font-semibold mb-6 text-gray-800 text-center">Get a Free Quote</h2>
-      <form class="space-y-6" enctype="multipart/form-data">
-        <!-- Full Name -->
-        <div>
-          <label class="block mb-1 font-medium text-gray-700" for="name">Full Name</label>
-          <input type="text" id="name" name="name" placeholder="Your full name" class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300" required />
-        </div>
-
-        <!-- Email -->
-        <div>
-          <label class="block mb-1 font-medium text-gray-700" for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="you@example.com" class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300" required />
-        </div>
-
-        <!-- Message -->
-        <div>
-          <label class="block mb-1 font-medium text-gray-700" for="message">Your Requirements</label>
-          <textarea id="message" name="message" rows="5" placeholder="Tell us more about your energy needs or location..." class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300" required></textarea>
-        </div>
-
-        <!-- File Upload -->
-        <div>
-          <label class="block mb-1 font-medium text-gray-700" for="bill">Upload Electricity Bill (PDF/Photo)</label>
-          <input type="file" id="bill" name="bill" accept=".pdf,image/*" class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300" />
-          <p class="text-sm text-gray-500 mt-1">Optional – helps us provide a more accurate quote.</p>
-        </div>
-
-        <!-- Submit Button -->
-        <button type="submit" class="bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-yellow-600 focus:outline-none transition duration-300 w-full">
-          Request Quote
-        </button>
-      </form>
-    </div>
-
     <!-- Solar Calculator with More Details -->
 <div class="bg-gray-100 p-8 rounded-lg shadow-md">
   <h2 class="text-3xl font-semibold text-center mb-6 text-gray-800">Solar System Size Calculator</h2>
@@ -458,6 +421,45 @@
 
   <div id="result" class="text-center mt-6 text-xl font-semibold text-yellow-500"></div>
 </div>
+
+    <!-- Quote Form -->
+    <div class="bg-white p-8 rounded-lg shadow-md">
+    
+      <h2 class="text-3xl font-semibold mb-6 text-gray-800 text-center">Get a Free Quote</h2>
+      <form class="space-y-6" enctype="multipart/form-data">
+        <!-- Full Name -->
+        <div>
+          <label class="block mb-1 font-medium text-gray-700" for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300" required />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label class="block mb-1 font-medium text-gray-700" for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300" required />
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label class="block mb-1 font-medium text-gray-700" for="message">Your Requirements</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us more about your energy needs or location..." class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300" required></textarea>
+        </div>
+
+        <!-- File Upload -->
+        <div>
+          <label class="block mb-1 font-medium text-gray-700" for="bill">Upload Electricity Bill (PDF/Photo)</label>
+          <input type="file" id="bill" name="bill" accept=".pdf,image/*" class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300" />
+          <p class="text-sm text-gray-500 mt-1">Optional – helps us provide a more accurate quote.</p>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-yellow-600 focus:outline-none transition duration-300 w-full">
+          Request Quote
+        </button>
+      </form>
+    </div>
+
+    
 
   </div>
 </section>
