@@ -551,6 +551,51 @@
     </div>
     <div class="text-center mt-8 text-xs text-gray-400">&copy; 2025 SunPower Enterprises. All rights reserved.</div>
   </footer>
+
+  <!-- Quote Popup Modal -->
+<div id="quoteModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-xl shadow-xl max-w-xl w-full p-8 relative" data-aos="zoom-in">
+    <!-- Close Button -->
+    <button id="closeModal" class="absolute top-3 right-3 text-gray-500 hover:text-red-500 text-xl font-bold">&times;</button>
+
+    <!-- Modal Title -->
+    <h2 class="text-3xl font-semibold text-yellow-500 mb-4">Get a Free Quote</h2>
+
+    <!-- Quote Form -->
+    <form class="space-y-4" enctype="multipart/form-data">
+      <div>
+        <label class="block mb-1 text-gray-700 font-medium" for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required
+               class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-yellow-500">
+      </div>
+
+      <div>
+        <label class="block mb-1 text-gray-700 font-medium" for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required
+               class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-yellow-500">
+      </div>
+
+      <div>
+        <label class="block mb-1 text-gray-700 font-medium" for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Tell us more about your needs..."
+                  class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-yellow-500"></textarea>
+      </div>
+
+      <div>
+        <label class="block mb-1 text-gray-700 font-medium" for="bill">Upload Electricity Bill (PDF/Photo)</label>
+        <input type="file" id="bill" name="bill" accept=".pdf,image/*"
+               class="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-yellow-500">
+        <p class="text-sm text-gray-500 mt-1">Optional – helps us provide an accurate quote.</p>
+      </div>
+
+      <button type="submit"
+              class="w-full bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-yellow-600 transition duration-300">
+        Request Quote
+      </button>
+    </form>
+  </div>
+</div>
+
   <script>
     const menuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
@@ -622,6 +667,21 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
     `;
   });
 </script>
+
+<script>
+  // Show popup after 12 seconds
+  window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      document.getElementById('quoteModal').classList.remove('hidden');
+    }, 12000); // 12 seconds
+  });
+
+  // Close button handler
+  document.getElementById('closeModal').addEventListener('click', () => {
+    document.getElementById('quoteModal').classList.add('hidden');
+  });
+</script>
+
 
 </body>
 </html>
