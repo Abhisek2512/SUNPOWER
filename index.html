@@ -198,75 +198,77 @@
      
 
    <!-- Video Testimonials -->
-<!-- Video Testimonials -->
-<section class="bg-yellow-100 py-16 px-4 scroll-mt-24">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl font-bold text-gray-800 mb-10">What Our Clients Say</h2>
-
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      
-      <!-- Testimonial Card -->
-      <div class="bg-white rounded-lg shadow hover:shadow-md overflow-hidden flex flex-col items-center p-4">
-        <div class="relative w-[180px] h-[320px] rounded overflow-hidden shadow-md">
-          <iframe 
-            class="absolute top-0 left-0 w-full h-full rounded" 
-            src="https://www.youtube.com/embed/VIDEO_ID1" 
-            frameborder="0" 
-            allowfullscreen>
-          </iframe>
+   <section class="py-16 px-4 scroll-mt-24">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-10">What Our Clients Say</h2>
+  
+      <!-- Mobile Testimonial Wrapper (1 at a time) -->
+      <div id="testimonial-wrapper" class="relative overflow-hidden md:hidden">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-item hidden">
+          <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client photo" class="w-24 h-24 rounded-full shadow-md border-4 border-yellow-300 mb-4" />
+            <p class="text-gray-700 italic text-center">"Seamless solar experience from start to finish!"</p>
+            <p class="text-sm text-gray-500 mt-2">— Priya Deshmukh, Nagpur</p>
+            <a href="https://www.youtube.com/watch?v=TX9qSaGXFyg" target="_blank" class="mt-3 text-yellow-600 hover:underline text-sm font-semibold">🎥 Watch More</a>
+          </div>
         </div>
-        <p class="text-sm text-gray-700 italic mt-4 text-center px-2">"Seamless solar experience from start to finish!"</p>
-        <p class="text-xs text-gray-500 mt-1">— Priya Deshmukh, Nagpur</p>
-        <a href="https://www.youtube.com/watch?v=VIDEO_ID1" target="_blank" class="mt-3 text-yellow-600 hover:underline text-sm font-medium">🎥 Watch Full Video</a>
-      </div>
-      <!-- Testimonial Card -->
-      <div class="bg-white rounded-lg shadow hover:shadow-md overflow-hidden flex flex-col items-center p-4">
-        <div class="relative w-[180px] h-[320px] rounded overflow-hidden shadow-md">
-          <iframe 
-            class="absolute top-0 left-0 w-full h-full rounded" 
-            src="https://www.youtube.com/embed/VIDEO_ID1" 
-            frameborder="0" 
-            allowfullscreen>
-          </iframe>
+  
+        <!-- Testimonial 2 -->
+        <div class="testimonial-item hidden">
+          <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+            <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Client photo" class="w-24 h-24 rounded-full shadow-md border-4 border-yellow-300 mb-4" />
+            <p class="text-gray-700 italic text-center">"Reliable service and great value."</p>
+            <p class="text-sm text-gray-500 mt-2">— Rajesh Patil, Pune</p>
+            <a href="https://www.youtube.com/watch?v=lTTajzrSkCw" target="_blank" class="mt-3 text-yellow-600 hover:underline text-sm font-semibold">🎥 Watch More</a>
+          </div>
         </div>
-        <p class="text-sm text-gray-700 italic mt-4 text-center px-2">"Seamless solar experience from start to finish!"</p>
-        <p class="text-xs text-gray-500 mt-1">— Priya Deshmukh, Nagpur</p>
-        <a href="https://www.youtube.com/watch?v=VIDEO_ID1" target="_blank" class="mt-3 text-yellow-600 hover:underline text-sm font-medium">🎥 Watch Full Video</a>
-      </div>
-      <!-- Testimonial Card -->
-      <div class="bg-white rounded-lg shadow hover:shadow-md overflow-hidden flex flex-col items-center p-4">
-        <div class="relative w-[180px] h-[320px] rounded overflow-hidden shadow-md">
-          <iframe 
-            class="absolute top-0 left-0 w-full h-full rounded" 
-            src="https://www.youtube.com/embed/VIDEO_ID1" 
-            frameborder="0" 
-            allowfullscreen>
-          </iframe>
+  
+        <!-- Testimonial 3 -->
+        <div class="testimonial-item hidden">
+          <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client photo" class="w-24 h-24 rounded-full shadow-md border-4 border-yellow-300 mb-4" />
+            <p class="text-gray-700 italic text-center">"Very professional team and quick install!"</p>
+            <p class="text-sm text-gray-500 mt-2">— Meena Kulkarni, Satara</p>
+            <a href="https://www.youtube.com/watch?v=ysz5S6PUM-U" target="_blank" class="mt-3 text-yellow-600 hover:underline text-sm font-semibold">🎥 Watch More</a>
+          </div>
         </div>
-        <p class="text-sm text-gray-700 italic mt-4 text-center px-2">"Seamless solar experience from start to finish!"</p>
-        <p class="text-xs text-gray-500 mt-1">— Priya Deshmukh, Nagpur</p>
-        <a href="https://www.youtube.com/watch?v=VIDEO_ID1" target="_blank" class="mt-3 text-yellow-600 hover:underline text-sm font-medium">🎥 Watch Full Video</a>
+  
+        <!-- Next Button (Mobile Only) -->
+        <button onclick="showNextTestimonial()" class="mt-6 bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-lg font-semibold transition md:hidden">
+          Next ▶️
+        </button>
       </div>
-      <!-- Testimonial Card -->
-      <div class="bg-white rounded-lg shadow hover:shadow-md overflow-hidden flex flex-col items-center p-4">
-        <div class="relative w-[180px] h-[320px] rounded overflow-hidden shadow-md">
-          <iframe 
-            class="absolute top-0 left-0 w-full h-full rounded" 
-            src="https://www.youtube.com/embed/VIDEO_ID1" 
-            frameborder="0" 
-            allowfullscreen>
-          </iframe>
+  
+      <!-- Desktop View (All testimonials side by side) -->
+      <div class="hidden md:grid md:grid-cols-3 gap-6">
+        <!-- Testimonial 1 -->
+        <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client photo" class="w-24 h-24 rounded-full shadow-md border-4 border-yellow-300 mb-4" />
+          <p class="text-gray-700 italic text-center">"Seamless solar experience from start to finish!"</p>
+          <p class="text-sm text-gray-500 mt-2">— Priya Deshmukh, Nagpur</p>
+          <a href="https://www.youtube.com/watch?v=TX9qSaGXFyg" target="_blank" class="mt-3 text-yellow-600 hover:underline text-sm font-semibold">🎥 Watch More</a>
         </div>
-        <p class="text-sm text-gray-700 italic mt-4 text-center px-2">"Seamless solar experience from start to finish!"</p>
-        <p class="text-xs text-gray-500 mt-1">— Priya Deshmukh, Nagpur</p>
-        <a href="https://www.youtube.com/watch?v=VIDEO_ID1" target="_blank" class="mt-3 text-yellow-600 hover:underline text-sm font-medium">🎥 Watch Full Video</a>
+  
+        <!-- Testimonial 2 -->
+        <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+          <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Client photo" class="w-24 h-24 rounded-full shadow-md border-4 border-yellow-300 mb-4" />
+          <p class="text-gray-700 italic text-center">"Reliable service and great value."</p>
+          <p class="text-sm text-gray-500 mt-2">— Rajesh Patil, Pune</p>
+          <a href="https://www.youtube.com/watch?v=lTTajzrSkCw" target="_blank" class="mt-3 text-yellow-600 hover:underline text-sm font-semibold">🎥 Watch More</a>
+        </div>
+  
+        <!-- Testimonial 3 -->
+        <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client photo" class="w-24 h-24 rounded-full shadow-md border-4 border-yellow-300 mb-4" />
+          <p class="text-gray-700 italic text-center">"Very professional team and quick install!"</p>
+          <p class="text-sm text-gray-500 mt-2">— Meena Kulkarni, Satara</p>
+          <a href="https://www.youtube.com/watch?v=ysz5S6PUM-U" target="_blank" class="mt-3 text-yellow-600 hover:underline text-sm font-semibold">🎥 Watch More</a>
+        </div>
       </div>
-
-      <!-- Duplicate this block for other videos -->
-      <!-- Just change VIDEO_ID and details -->
+  
     </div>
-  </div>
-</section>
+  </section>
 
     
       <section class="py-20 bg-white scroll-mt-24"id="how-it-works">
@@ -664,6 +666,23 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
   }
 </script>
 
+<!-- JS for Mobile Next Button -->
+<script>
+  const testimonials = document.querySelectorAll('.testimonial-item');
+  let currentIndex = 0;
+
+  function showNextTestimonial() {
+    testimonials[currentIndex].classList.add('hidden');
+    currentIndex = (currentIndex + 1) % testimonials.length;
+    testimonials[currentIndex].classList.remove('hidden');
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    if (testimonials.length > 0) {
+      testimonials[0].classList.remove('hidden');
+    }
+  });
+</script>
 
 </body>
 </html>
