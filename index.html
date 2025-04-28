@@ -81,15 +81,29 @@
 
   <!-- Main Content -->
 <main>
-  <section class="bg-yellow-50 py-20 text-center px-4 scroll-mt-24" id= "home">
-    <div data-aos="zoom-in">
+  <section class="relative bg-yellow-50 py-20 text-center px-4 scroll-mt-24 overflow-hidden" id="home">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+      <source src="videos/bg video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  
+    <!-- Overlay to slightly dim the video if needed -->
+    <div class="absolute inset-0 bg-yellow-50 bg-opacity-60 z-10"></div>
+  
+    <!-- Content -->
+    <div class="relative z-20" data-aos="zoom-in">
       <h1 class="text-5xl font-bold text-yellow-600 mb-4">Powering Your Future with Solar</h1>
-      <p class="text-lg text-gray-700 max-w-2xl mx-auto">Join the clean energy revolution with SunPower Enterprises. Affordable, efficient, and sustainable solar energy solutions for homes and businesses.</p>
-      
+      <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+        Join the clean energy revolution with SunPower Enterprises. Affordable, efficient, and sustainable solar energy solutions for homes and businesses.
+      </p>
+  
       <div class="mt-6">
-        <a href="#get-quote" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded font-semibold no-underline">Get a Free Quote</a>
+        <a href="#get-quote" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded font-semibold no-underline">
+          Get a Free Quote
+        </a>
       </div>
-      
+  
       <!-- 🎥 Lottie Animation -->
       <div class="mt-10">
         <lottie-player 
@@ -98,21 +112,22 @@
           loop autoplay>
         </lottie-player>
       </div>
-      
+  
       <!-- Social Media Links -->
-      <div class="flex justify-center space-x-6 mt-8 text-yellow-500 ">
+      <div class="flex justify-center space-x-6 mt-8 text-yellow-500">
         <a href="#" class="hover:text-yellow-600">
-          <i class="fab fa-facebook-f text-3xl"></i> <!-- Facebook Icon -->
+          <i class="fab fa-facebook-f text-3xl"></i>
         </a>
         <a href="#" class="hover:text-yellow-600">
-          <i class="fab fa-twitter text-3xl"></i> <!-- Twitter Icon -->
+          <i class="fab fa-twitter text-3xl"></i>
         </a>
         <a href="#" class="hover:text-yellow-600">
-          <i class="fab fa-instagram text-3xl"></i> <!-- Instagram Icon -->
+          <i class="fab fa-instagram text-3xl"></i>
         </a>
       </div>
     </div>
   </section>
+  
 </main>
 
 <section id="about" class="py-20 bg-white scroll-mt-24">
