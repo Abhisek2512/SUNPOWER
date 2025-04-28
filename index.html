@@ -81,18 +81,15 @@
 
   <!-- Main Content -->
 <main>
-  <section class="relative bg-yellow-50 py-20 text-center px-4 scroll-mt-24 overflow-hidden" id="home">
+  <section class="relative h-screen bg-yellow-50 text-center px-4 scroll-mt-24 overflow-hidden" id="home">
     <!-- Background Video -->
     <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
       <source src="videos/bg video.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   
-    <!-- Overlay to slightly dim the video if needed
-    <div class="absolute inset-0 bg-yellow-50 bg-opacity-80 z-10"></div>
-   -->
     <!-- Content -->
-    <div class="relative z-20" data-aos="zoom-in">
+    <div class="relative z-20 flex flex-col justify-center items-center h-full" data-aos="zoom-in">
       <h1 class="text-5xl font-bold text-yellow-600 mb-4">Powering Your Future with Solar</h1>
       <p class="text-lg text-gray-700 max-w-2xl mx-auto">
         Join the clean energy revolution with SunPower Enterprises. Affordable, efficient, and sustainable solar energy solutions for homes and businesses.
@@ -111,7 +108,7 @@
           background="transparent" speed="1" style="width: 180px; height: 180px; margin: 0 auto;"
           loop autoplay>
         </lottie-player>
-      </div> 
+      </div>
   
       <!-- Social Media Links -->
       <div class="flex justify-center space-x-6 mt-8 text-yellow-500">
@@ -127,6 +124,17 @@
       </div>
     </div>
   </section>
+  
+  <!-- About Section (Next Section) -->
+  <section class="py-20 bg-white text-center px-4 scroll-mt-24" id="about">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold text-yellow-600 mb-6">About Us</h2>
+      <p class="text-gray-700 text-lg">
+        We are dedicated to bringing affordable, renewable energy solutions to homes and businesses across the country. Our mission is to empower communities with clean energy.
+      </p>
+    </div>
+  </section>
+  
   
 </main>
 
