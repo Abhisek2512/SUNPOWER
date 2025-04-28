@@ -25,7 +25,17 @@
   .animate-bounce-float {
     animation: bounce-float 2s infinite ease-in-out;
   }
-  
+  @keyframes fade {
+  0% { opacity: 1; }
+  16.66% { opacity: 1; }
+  20% { opacity: 0; }
+  96.66% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.animate-fade {
+  animation: fade 25s infinite;
+}
   </style>
   
 
@@ -77,14 +87,14 @@
 <main>
   <section class="relative h-screen bg-yellow-50 text-center px-4 scroll-mt-24 overflow-hidden" id="home">
   
-    <!-- Background Video (show only on desktop)
-    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover hidden md:block z-0">
-      <source src="videos/bg video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video> -->
-  
-    <!-- Mobile Background (yellow color for mobile users) -->
-    <div class="absolute top-0 left-0 w-full h-full bg-yellow-50 md:hidden z-0"></div>
+    <!-- Background Slideshow -->
+    <div class="absolute top-0 left-0 w-full h-full z-0">
+      <div class="absolute inset-0 animate-fade bg-cover bg-center" style="background-image: url('images/bg/american-public-power-association-513dBrMJ_5w-unsplash.jpg'); animation-delay: 0s;"></div>
+      <div class="absolute inset-0 animate-fade bg-cover bg-center" style="background-image: url('images/bg/american-public-power-association-XGAZzyLzn18-unsplash.jpg'); animation-delay: 5s;"></div>
+      <div class="absolute inset-0 animate-fade bg-cover bg-center" style="background-image: url('images/bg/dad-hotel-6wg8GbD0UZ0-unsplash.jpg'); animation-delay: 10s;"></div>
+      <div class="absolute inset-0 animate-fade bg-cover bg-center" style="background-image: url('images/bg/michael-fortsch-YXAJNhEj2lU-unsplash.jpg'); animation-delay: 15s;"></div>
+      <div class="absolute inset-0 animate-fade bg-cover bg-center" style="background-image: url('images/bg/nicholas-doherty-pONBhDyOFoM-unsplash.jpg'); animation-delay: 20s;"></div>
+    </div>
   
     <!-- Content -->
     <div class="relative z-20 flex flex-col justify-center items-center h-full" data-aos="zoom-in">
@@ -116,7 +126,6 @@
         <a href="#" class="hover:text-yellow-600">
           <i class="fab fa-youtube text-3xl"></i>
         </a>
-        
         <a href="#" class="hover:text-yellow-600">
           <i class="fab fa-instagram text-3xl"></i>
         </a>
