@@ -57,15 +57,23 @@
       </div>
     </a>
 
-    <nav class="hidden md:flex gap-6 text-sm font-medium">
-      <a href="#home" class="hover:text-yellow-500">Home</a>
-      <a href="#about" class="hover:text-yellow-500">About</a>
-      <a href="#services" class="hover:text-yellow-500">Services</a>
-      <a href="#projects" class="hover:text-yellow-500">Projects</a>
-      <a href="#how-it-works" class="hover:text-yellow-500">How It Works</a>
-      <a href="#contact" class="hover:text-yellow-500">Contact</a>
-      <a href="#quote" class="bg-yellow-500 text-white px-4 py-1 rounded hover:bg-yellow-600">Get Quote</a>
+    <nav class="hidden md:flex items-center w-full text-sm font-medium">
+      <!-- Centered Links -->
+      <div class="flex gap-6 mx-auto">
+        <a href="#home" class="hover:text-yellow-500 no-underline">Home</a>
+        <a href="#about" class="hover:text-yellow-500 no-underline">About</a>
+        <a href="#services" class="hover:text-yellow-500 no-underline">Services</a>
+        <a href="#projects" class="hover:text-yellow-500 no-underline">Projects</a>
+        <a href="#how-it-works" class="hover:text-yellow-500 no-underline">How It Works</a>
+        <a href="#contact" class="hover:text-yellow-500 no-underline">Contact</a>
+      </div>
+    
+      <!-- Right-Aligned Quote Button -->
+      <a href="#quote" class="bg-yellow-500 text-white px-4 py-1 rounded hover:bg-yellow-600 ml-auto">
+        Get Quote
+      </a>
     </nav>
+    
 
     <!-- Mobile Nav Toggle -->
     <button id="mobile-menu-btn" class="md:hidden text-gray-800 text-2xl">
