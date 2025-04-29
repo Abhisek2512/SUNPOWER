@@ -41,18 +41,15 @@
   animation: fade 25s infinite;
 }
 
-@keyframes loop-scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+@keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
 }
 
-.animate-loop-scroll {
-  animation: loop-scroll 30s linear infinite;
+.animate-marquee {
+  animation: marquee 20s linear infinite;
 }
+
 
   </style>
   
@@ -569,8 +566,8 @@
   <h2 class="text-3xl font-bold text-center mb-8 text-yellow-500">Our Clients</h2>
 
   <!-- Rotating Logos Carousel -->
-  <div class="relative w-full overflow-hidden">
-    <div class="flex gap-10 animate-loop-scroll whitespace-nowrap">
+  <div class="overflow-hidden w-full">
+    <div class="flex gap-12 animate-marquee whitespace-nowrap">
       <!-- Logo Set (Repeat for smooth loop) -->
       <img src="images/1.jpg" class="h-16 w-auto inline-block" alt="Client 1" />
       <img src="images/2.jpg" class="h-16 w-auto inline-block" alt="Client 2" />
