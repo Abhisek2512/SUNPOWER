@@ -167,13 +167,7 @@
   </section>
   
   
-  <!-- About Section (Next Section)
-  <section class="py-20 bg-white text-center px-4 scroll-mt-24" id="about">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl font-bold text-yellow-600 mb-6">About Us</h2>
-    </div>
-  </section> -->
-  
+ 
   
 </main>
 
@@ -667,7 +661,7 @@
           <li><a href="index.html" class="hover:text-yellow-500">Home</a></li>
           <li><a href="#services" class="hover:text-yellow-500">Services</a></li>
           <li><a href="#projects" class="hover:text-yellow-500">Projects</a></li>
-          <li><a href="#get-quote" class="hover:text-yellow-500">Get a Quote</a></li>
+          <li><a href="#quote" class="hover:text-yellow-500">Get a Quote</a></li>
         </ul>
       </div>
       <div>
@@ -709,11 +703,7 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
 </a>
 
 
-<!-- Get quote Button 
-<a href="#get-quote" 
-class="fixed bottom-6 right-6 z-50 bg-yellow-500 text-white px-5 py-3 rounded-full shadow-lg hover:bg-yellow-600 transition-all duration-300 ease-in-out animate-bounce-float">
-⚡ Get Quote
-</a> -->
+
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
@@ -756,10 +746,6 @@ class="fixed bottom-6 right-6 z-50 bg-yellow-500 text-white px-5 py-3 rounded-fu
     const systemSize = (dailyUsage / 4).toFixed(2); // Assuming 4 sun hours/day
 
     result.innerHTML = `
-      Consumer No: <strong>${consumerNumber}</strong><br>
-      Billing Unit: <strong>${billingUnit}</strong><br>
-      Monthly Units: <strong>${monthlyUnits} kWh</strong><br>
-      Monthly Bill: <strong>₹${monthlyBill}</strong><br><br>
       🌞 Recommended Solar System Size: <strong>${systemSize} kW</strong>
     `;
   });
