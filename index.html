@@ -110,33 +110,30 @@
   <!-- Main Content -->
 <main>
   <section class="relative h-screen bg-yellow-50 text-center px-4 scroll-mt-24 overflow-hidden" id="home">
+
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0 hidden md:block">
+      <source src="videos/video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
   
-    <!-- Background Slideshow -->
-    <div class="absolute top-0 left-0 w-full h-full z-0">
-      <div class="absolute inset-0 animate-fade bg-cover bg-center" style="background-image: url('https://fmdxeqsjcfcztrfuofhk.supabase.co/storage/v1/object/public/tp//3.jpg'); animation-delay: 0s;"></div>
-      <div class="absolute inset-0 animate-fade bg-cover bg-center" style="background-image: url('https://fmdxeqsjcfcztrfuofhk.supabase.co/storage/v1/object/public/tp//2.jpg'); animation-delay: 5s;"></div>
-      <div class="absolute inset-0 animate-fade bg-cover bg-center" style="background-image: url('https://fmdxeqsjcfcztrfuofhk.supabase.co/storage/v1/object/public/tp//3.jpg'); animation-delay: 10s;"></div>
-      <div class="absolute inset-0 animate-fade bg-cover bg-center" style="background-image: url('https://fmdxeqsjcfcztrfuofhk.supabase.co/storage/v1/object/public/tp//4.jpg'); animation-delay: 15s;"></div>
-      <div class="absolute inset-0 animate-fade bg-cover bg-center" style="background-image: url('https://fmdxeqsjcfcztrfuofhk.supabase.co/storage/v1/object/public/tp//5.jpg'); animation-delay: 20s;"></div>
+    <!-- Mobile Background Fallback -->
+    <div class="absolute top-0 left-0 w-full h-full z-0 md:hidden">
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('videos/video.mp4');"></div>
     </div>
-
-    <!-- Background Slideshow for Mobile -->
-<div class="absolute top-0 left-0 w-full h-full z-0 md:hidden">
-  <div class="absolute inset-0 animate-fade bg-cover bg-center" style="background-image: url('images/guillherme-schneider-ecIS-bfYSG8-unsplash.jpg'); animation-delay: 0s;"></div>
-  <div class="absolute inset-0 animate-fade bg-cover bg-center" style="background-image: url('images/john-thomas-fj_Z_-qQqr0-unsplash.jpg'); animation-delay: 5s;"></div>
-  <div class="absolute inset-0 animate-fade bg-cover bg-center" style="background-image: url('images/soren-h-1PKAYeA_nZ4-unsplash.jpg'); animation-delay: 10s;"></div>
-</div>
-
   
-    <!-- Content -->
+    <!-- Optional Overlay for Readability -->
+    <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+  
+    <!-- Main Content -->
     <div class="relative z-20 flex flex-col justify-center items-center h-full" data-aos="zoom-in">
-      <h1 class="text-5xl font-bold text-[#FFFFFF] mb-4">Powering Your Future with Solar</h1>
+      <h1 class="text-5xl font-bold text-white mb-4">Powering Your Future with Solar</h1>
       <p class="text-lg text-white max-w-2xl mx-auto">
         Join the clean energy revolution with SunPower Enterprises. Affordable, efficient, and sustainable solar energy solutions for homes and businesses.
       </p>
   
       <div class="mt-6">
-        <a href="#get-quote" class="bg-yellow-500 hover:bg-orange-600  text-white px-6 py-3 rounded font-semibold no-underline">
+        <a href="#get-quote" class="bg-yellow-500 hover:bg-orange-600 text-white px-6 py-3 rounded font-semibold no-underline">
           Get a Free Quote
         </a>
       </div>
@@ -165,6 +162,7 @@
     </div>
   
   </section>
+  
   
   
  
