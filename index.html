@@ -51,11 +51,23 @@
 }
 
 
+  #loader {
+    transition: opacity 0.5s ease;
+  }
+
+
+
   </style>
   
 
 
 <body class="bg-white text-gray-800 font-sans scroll-smooth">
+  <!-- Loader -->
+<div id="loader" class="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center text-center">
+  <div class="w-16 h-16 border-4 border-yellow-500 border-t-transparent rounded-full animate-spin mb-4"></div>
+  <p class="text-lg font-medium text-yellow-600 animate-pulse">Just a sec... Loading SunPower Solar ☀️</p>
+</div>
+
  
 
 
@@ -104,6 +116,8 @@
     <a href="#quote" class="block bg-yellow-500 text-white px-4 py-2 rounded text-center hover:bg-yellow-600 no-underline">Get a Quote</a>
   </nav>
 </header>
+
+
 
 
 
@@ -793,6 +807,17 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
     }
   });
 </script>
+
+<script>
+  window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    if (loader) {
+      loader.classList.add('opacity-0', 'pointer-events-none');
+      setTimeout(() => loader.remove(), 500); // Smooth fade out
+    }
+  });
+</script>
+
 
 </body>
 </html>
