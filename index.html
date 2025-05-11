@@ -818,16 +818,32 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
   });
 </script>
 <!-- One-Time Popup Modal -->
-<div id="popupModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-50 hidden">
-  <div class="bg-white rounded-lg p-6 max-w-sm text-center shadow-lg relative">
+<!-- One-Time Popup Modal -->
+<div id="popupModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-50 hidden px-4">
+  <div class="bg-white rounded-lg p-6 w-full max-w-md text-center shadow-lg relative">
+    
+    <!-- Close Button -->
     <button id="closePopup" class="absolute top-2 right-3 text-gray-500 hover:text-red-600 text-xl font-bold">&times;</button>
-    <img src="images/popup.webp" alt="Promo" class="w-full h-auto rounded mb-4" />
-    <p class="text-lg font-semibold text-gray-800">☀️ Ready to save with solar? Discover how SunStream Solar can power your future!</p>
+    
+    <!-- Promo Image -->
+    <img src="images/popup.webp" alt="Promo" class="w-full h-auto rounded mb-4 max-h-64 object-cover" />
+    
+    <!-- Message -->
+    <p class="text-base md:text-lg font-semibold text-gray-800 mb-4">
+      ☀️ Ready to save with solar? Discover how SunStream Solar can power your future!
+    </p>
+    
+    <!-- CTA Button -->
+    <button id="quoteBtn" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded">
+      Get a Free Quote
+    </button>
   </div>
 </div>
+
 <script>
   const popup = document.getElementById("popupModal");
   const closeBtn = document.getElementById("closePopup");
+  const quoteBtn = document.getElementById("quoteBtn");
 
   function showPopup() {
     if (!sessionStorage.getItem("popupShown")) {
@@ -840,12 +856,19 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
     popup.classList.add("hidden");
   }
 
-  // Show popup once after 40 seconds if not already shown
   window.addEventListener("load", () => {
-    setTimeout(showPopup, 40000); // 40 seconds
+    setTimeout(showPopup, 40000); // 40 seconds after load
   });
 
   closeBtn.addEventListener("click", hidePopup);
+
+  quoteBtn.addEventListener("click", () => {
+    hidePopup();
+    const quoteSection = document.getElementById("quote");
+    if (quoteSection) {
+      quoteSection.scrollIntoView({ behavior: "smooth" });
+    }
+  });
 </script>
 
 
